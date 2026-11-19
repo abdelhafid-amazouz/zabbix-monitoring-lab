@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1000" font-family="Lato, Helvetica, Arial, sans-serif">
+<defs>
+<linearGradient id="b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2f5090"/><stop offset="1" stop-color="#1f3562"/></linearGradient>
+<linearGradient id="p" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9b4fdc"/><stop offset="1" stop-color="#7a2fbe"/></linearGradient>
+<marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#7a2fbe"/></marker>
+</defs>
+<rect width="2000" height="1000" fill="#fff"/>
+<text x="1000" y="75" text-anchor="middle" font-size="46" font-weight="700" fill="#3d0f6b">Zabbix Monitoring Architecture</text>
+<rect x="600" y="98" width="800" height="4" fill="#7a2fbe"/>
+<g font-size="26" font-weight="700" fill="#1f3562" text-anchor="middle">
+<text x="287" y="172">Monitored hosts</text><text x="1000" y="172">Central server</text><text x="1627" y="172">Notification</text></g>
+<g fill="url(#b)"><rect x="80" y="214" width="413" height="187" rx="22"/><rect x="80" y="454" width="413" height="187" rx="22"/><rect x="1454" y="481" width="386" height="160" rx="22"/></g>
+<g fill="#fff" text-anchor="middle">
+<text x="287" y="266" font-size="30" font-weight="700">Ubuntu Server</text>
+<text x="287" y="302" font-size="22" opacity=".85">192.168.56.11 · Zabbix Agent 2</text>
+<text x="287" y="347" font-size="20">• CPU / Memory usage</text><text x="287" y="377" font-size="20">• Network traffic / Availability</text>
+<text x="287" y="506" font-size="30" font-weight="700">Machine MX</text>
+<text x="287" y="542" font-size="22" opacity=".85">192.168.56.13 · Zabbix Agent 2</text>
+<text x="287" y="587" font-size="20">• CPU / Memory usage</text><text x="287" y="617" font-size="20">• Network traffic / Availability</text>
+<text x="1647" y="533" font-size="30" font-weight="700">Admin mailbox</text>
+<text x="1647" y="569" font-size="20">Real-time delivery</text><text x="1647" y="601" font-size="20">Problem → Resolved</text>
+</g>
+<rect x="747" y="388" width="506" height="293" rx="22" fill="url(#p)"/>
+<g fill="#fff" text-anchor="middle"><text x="1000" y="446" font-size="32" font-weight="700">Zabbix Server</text><text x="1000" y="482" font-size="22" opacity=".85">192.168.56.10</text></g>
+<g fill="#fff" fill-opacity=".15"><rect x="787" y="508" width="200" height="60" rx="12"/><rect x="1013" y="508" width="200" height="60" rx="12"/><rect x="787" y="588" width="426" height="60" rx="12"/></g>
+<g fill="#fff" text-anchor="middle" font-size="19"><text x="887" y="545">Data collection</text><text x="1113" y="545">Triggers (thresholds)</text><text x="1000" y="625">Alert generation (problem / resolved)</text></g>
+<rect x="1454" y="214" width="386" height="146" rx="22" fill="#f1e9f9" stroke="#7a2fbe" stroke-width="3"/>
+<g text-anchor="middle" fill="#3d0f6b"><text x="1647" y="267" font-size="28" font-weight="700">Media type: Gmail</text><text x="1647" y="302" font-size="20" fill="#555">SMTP server (sends e-mail)</text><text x="1647" y="332" font-size="20" fill="#555">Filtered by severity</text></g>
+<g fill="none" stroke="#7a2fbe" stroke-width="5" marker-end="url(#a)">
+<path d="M497,293 C640,300 690,400 745,455"/><path d="M497,547 C620,540 680,480 745,475"/>
+<path d="M1255,507 C1340,480 1400,420 1470,360"/><path d="M1647,362 L1647,470"/></g>
+<g font-style="italic" font-size="20" fill="#555"><text x="560" y="400">metrics</text><text x="1350" y="385">alert</text></g>
+<rect x="80" y="747" width="1760" height="120" rx="18" fill="#f6f2fb" stroke="#c9b5e6" stroke-width="2"/>
+<text x="960" y="793" text-anchor="middle" font-size="26" font-weight="700" fill="#3d0f6b">Internal network (Host-only) — 192.168.56.0/24</text>
+<text x="960" y="835" text-anchor="middle" font-size="21" fill="#555">Virtualized with VirtualBox — permanent communication between the hosts and the Zabbix server</text>
+<g font-size="21" fill="#333"><rect x="80" y="928" width="24" height="24" rx="6" fill="#2f5090"/><text x="115" y="947">Monitored host (Zabbix agent)</text>
+<rect x="440" y="928" width="24" height="24" rx="6" fill="#9b4fdc"/><text x="475" y="947">Central monitoring server</text>
+<rect x="852" y="928" width="24" height="24" rx="6" fill="#f1e9f9" stroke="#7a2fbe" stroke-width="2"/><text x="888" y="947">Notification channel (Gmail SMTP)</text></g>
+</svg>
